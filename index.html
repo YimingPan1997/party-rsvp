@@ -79,7 +79,6 @@
         }
         
         input[type="text"],
-        input[type="email"],
         select {
             width: 100%;
             padding: 12px;
@@ -90,7 +89,6 @@
         }
         
         input[type="text"]:focus,
-        input[type="email"]:focus,
         select:focus {
             outline: none;
             border-color: #667eea;
@@ -153,39 +151,36 @@
         
         <div class="rsvp-form">
             <h2 style="color: #667eea; margin-bottom: 20px;">RSVP</h2>
-            <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="_blank">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeSzFXN0sxmN-iaVEiRLcnxvUGzTfYlrL3NmovzKnM6x5Z5eg/formResponse" method="POST" target="_blank">
                 
                 <div class="form-group">
                     <label for="name">Your Name *</label>
-                    <input type="text" id="name" name="entry.YOUR_ENTRY_ID" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="entry.YOUR_ENTRY_ID" required>
+                    <input type="text" id="name" name="entry.1518015001" required>
                 </div>
                 
                 <div class="form-group">
                     <label>Will you attend? *</label>
                     <div class="radio-group">
                         <div class="radio-option">
-                            <input type="radio" id="yes" name="entry.YOUR_ENTRY_ID" value="Yes, I'll be there!" required>
+                            <input type="radio" id="yes" name="entry.1732428918" value="Yes, I'll be there!" required>
                             <label for="yes" style="margin: 0; font-weight: normal;">Yes, I'll be there! 🎉</label>
                         </div>
                         <div class="radio-option">
-                            <input type="radio" id="no" name="entry.YOUR_ENTRY_ID" value="Sorry, can't make it">
+                            <input type="radio" id="no" name="entry.1732428918" value="Sorry, can't make it">
                             <label for="no" style="margin: 0; font-weight: normal;">Sorry, can't make it 😢</label>
                         </div>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label for="guests">Number of Guests</label>
-                    <select id="guests" name="entry.YOUR_ENTRY_ID">
-                        <option value="1">Just me</option>
-                        <option value="2">2 people</option>
-                        <option value="3">3 people</option>
-                        <option value="4">4 people</option>
+                    <label for="guests">Number of Guests *</label>
+                    <select id="guests" name="entry.1301987042" required>
+                        <option value="">Select number of guests</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                 </div>
                 
