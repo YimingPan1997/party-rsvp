@@ -14,25 +14,53 @@
         
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            position: relative;
+        }
+        
+        /* Background image with overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('your-image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -2;
+        }
+        
+        /* Dark overlay for readability */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 20, 147, 0.6) 100%);
+            z-index: -1;
         }
         
         .container {
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             padding: 40px;
             max-width: 600px;
             width: 100%;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(255, 20, 147, 0.4);
+            border: 3px solid #ff1493;
         }
         
         h1 {
-            color: #667eea;
+            color: #ff1493;
             text-align: center;
             margin-bottom: 10px;
             font-size: 2.5em;
@@ -46,10 +74,11 @@
         }
         
         .details {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #ffe6f0 0%, #fff0f8 100%);
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 30px;
+            border: 2px solid #ff1493;
         }
         
         .details p {
@@ -59,7 +88,7 @@
         }
         
         .details strong {
-            color: #667eea;
+            color: #ff1493;
         }
         
         .rsvp-form {
@@ -81,7 +110,7 @@
         select {
             width: 100%;
             padding: 12px;
-            border: 2px solid #e0e0e0;
+            border: 2px solid #ff1493;
             border-radius: 8px;
             font-size: 1em;
             transition: border-color 0.3s;
@@ -90,7 +119,8 @@
         input[type="text"]:focus,
         select:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #000000;
+            box-shadow: 0 0 10px rgba(255, 20, 147, 0.3);
         }
         
         .radio-group {
@@ -109,12 +139,13 @@
             width: 20px;
             height: 20px;
             cursor: pointer;
+            accent-color: #ff1493;
         }
         
         button {
             width: 100%;
             padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #000000 0%, #ff1493 100%);
             color: white;
             border: none;
             border-radius: 8px;
@@ -126,11 +157,17 @@
         
         button:hover {
             transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 20, 147, 0.5);
         }
         
         .emoji {
             font-size: 3em;
             text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #ff1493;
             margin-bottom: 20px;
         }
     </style>
@@ -149,7 +186,7 @@
         </div>
         
         <div class="rsvp-form">
-            <h2 style="color: #667eea; margin-bottom: 20px;">RSVP</h2>
+            <h2>RSVP</h2>
             <form action="https://docs.google.com/forms/d/e/1FAIpQLSeSzFXN0sxmN-iaVEiRLcnxvUGzTfYlrL3NmovzKnM6x5Z5eg/formResponse" method="POST" target="_blank">
                 
                 <div class="form-group">
