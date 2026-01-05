@@ -1,4 +1,4 @@
-```html
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +37,6 @@
             position: relative;
         }
         
-        /* White overlay for readability */
         .content-wrapper {
             background: rgba(255, 255, 255, 0.92);
             padding: 30px;
@@ -174,22 +173,22 @@
             
             <div class="rsvp-form">
                 <h2>RSVP</h2>
-                <form action="https://docs.google.com/forms/d/e/1FAIpQLSeSzFXN0sxmN-iaVEiRLcnxvUGzTfYlrL3NmovzKnM6x5Z5eg/formResponse" method="POST">
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSeSzFXN0sxmN-iaVEiRLcnxvUGzTfYlrL3NmovzKnM6x5Z5eg/formResponse" method="POST" target="_blank">
                     
                     <div class="form-group">
                         <label for="name">Your Name *</label>
-                        <input type="text" id="name" name="entry.1518015001" required>
+                        <input type="text" id="name" name="entry.1502628019" required>
                     </div>
                     
                     <div class="form-group">
                         <label>Will you attend? *</label>
                         <div class="radio-group">
                             <div class="radio-option">
-                                <input type="radio" id="yes" name="entry.1732428918" value="Yes, I'll be there!" required>
+                                <input type="radio" id="yes" name="entry.2139173700" value="Yes, I'll be there!" required>
                                 <label for="yes" style="margin: 0; font-weight: normal;">Yes, I'll be there! 🎉</label>
                             </div>
                             <div class="radio-option">
-                                <input type="radio" id="no" name="entry.1732428918" value="Sorry, can't make it">
+                                <input type="radio" id="no" name="entry.2139173700" value="Sorry, can't make it">
                                 <label for="no" style="margin: 0; font-weight: normal;">Sorry, can't make it 😢</label>
                             </div>
                         </div>
@@ -197,7 +196,7 @@
                     
                     <div class="form-group">
                         <label for="guests">Number of Guests *</label>
-                        <select id="guests" name="entry.1301987042" required>
+                        <select id="guests" name="entry.1576030858" required>
                             <option value="">Select number of guests</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -212,10 +211,17 @@
             </div>
         </div>
     </div>
+    
+    <script>
+    document.querySelector('form').addEventListener('submit', function() {
+        setTimeout(function() {
+            document.querySelector('form').reset();
+            alert('Thank you for your RSVP! 🎉');
+        }, 500);
+    });
+    </script>
 </body>
 </html>
-
-```
 
 
 
