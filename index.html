@@ -1,3 +1,4 @@
+```html
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,48 +24,24 @@
         }
         
         .container {
-            position: relative;
+            background-image: url('IMG_9710.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             border-radius: 20px;
             padding: 40px;
             max-width: 600px;
             width: 100%;
             box-shadow: 0 20px 60px rgba(255, 20, 147, 0.4);
             border: 3px solid #ff1493;
-            overflow: hidden;
-        }
-        
-        /* Background image for container */
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('IMG_9710.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.15;
-            z-index: 0;
+            position: relative;
         }
         
         /* White overlay for readability */
-        .container::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.85);
-            z-index: 1;
-        }
-        
-        /* Make all content appear above the background */
-        .container > * {
-            position: relative;
-            z-index: 2;
+        .content-wrapper {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 30px;
+            border-radius: 15px;
         }
         
         h1 {
@@ -82,7 +59,7 @@
         }
         
         .details {
-            background: rgba(255, 230, 240, 0.9);
+            background: linear-gradient(135deg, #ffe6f0 0%, #fff0f8 100%);
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 30px;
@@ -122,7 +99,7 @@
             border-radius: 8px;
             font-size: 1em;
             transition: border-color 0.3s;
-            background: rgba(255, 255, 255, 0.95);
+            background: white;
         }
         
         input[type="text"]:focus,
@@ -183,58 +160,62 @@
 </head>
 <body>
     <div class="container">
-        <div class="emoji">🎉🎂🎈</div>
-        <h1>You're Invited!</h1>
-        <p class="subtitle">Join us for a birthday celebration</p>
-        
-        <div class="details">
-            <p><strong>📅 Date:</strong> January 18, 2026</p>
-            <p><strong>🕐 Time:</strong> 7:30 PM</p>
-            <p><strong>📍 Location:</strong> 402 Bangor Ave</p>
-            <p><strong>🎁 Theme:</strong> Black and Pink</p>
-        </div>
-        
-        <div class="rsvp-form">
-            <h2>RSVP</h2>
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeSzFXN0sxmN-iaVEiRLcnxvUGzTfYlrL3NmovzKnM6x5Z5eg/formResponse" method="POST" target="_blank">
-                
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" id="name" name="entry.1518015001" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Will you attend? *</label>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" id="yes" name="entry.1732428918" value="Yes, I'll be there!" required>
-                            <label for="yes" style="margin: 0; font-weight: normal;">Yes, I'll be there! 🎉</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" id="no" name="entry.1732428918" value="Sorry, can't make it">
-                            <label for="no" style="margin: 0; font-weight: normal;">Sorry, can't make it 😢</label>
+        <div class="content-wrapper">
+            <div class="emoji">🎉🎂🎈</div>
+            <h1>You're Invited!</h1>
+            <p class="subtitle">Join us for a birthday celebration</p>
+            
+            <div class="details">
+                <p><strong>📅 Date:</strong> January 18, 2026</p>
+                <p><strong>🕐 Time:</strong> 7:30 PM</p>
+                <p><strong>📍 Location:</strong> 402 Bangor Ave</p>
+                <p><strong>🎁 Theme:</strong> Black and Pink</p>
+            </div>
+            
+            <div class="rsvp-form">
+                <h2>RSVP</h2>
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSeSzFXN0sxmN-iaVEiRLcnxvUGzTfYlrL3NmovzKnM6x5Z5eg/formResponse" method="POST" target="_blank">
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="entry.1518015001" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Will you attend? *</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="yes" name="entry.1732428918" value="Yes, I'll be there!" required>
+                                <label for="yes" style="margin: 0; font-weight: normal;">Yes, I'll be there! 🎉</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="no" name="entry.1732428918" value="Sorry, can't make it">
+                                <label for="no" style="margin: 0; font-weight: normal;">Sorry, can't make it 😢</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="guests">Number of Guests *</label>
-                    <select id="guests" name="entry.1301987042" required>
-                        <option value="">Select number of guests</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                
-                <button type="submit">Submit RSVP</button>
-            </form>
+                    
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" name="entry.1301987042" required>
+                            <option value="">Select number of guests</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit">Submit RSVP</button>
+                </form>
+            </div>
         </div>
     </div>
 </body>
 </html>
+
+```
 
 
 
