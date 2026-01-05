@@ -1,0 +1,199 @@
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Party Invitation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+        
+        .details {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .details p {
+            margin: 10px 0;
+            color: #333;
+            font-size: 1.1em;
+        }
+        
+        .details strong {
+            color: #667eea;
+        }
+        
+        .rsvp-form {
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .emoji {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🎉🎂🎈</div>
+        <h1>You're Invited!</h1>
+        <p class="subtitle">Join us for a birthday celebration</p>
+        
+        <div class="details">
+            <p><strong>📅 Date:</strong> [Your Date Here]</p>
+            <p><strong>🕐 Time:</strong> [Your Time Here]</p>
+            <p><strong>📍 Location:</strong> [Your Location Here]</p>
+            <p><strong>🎁 Theme:</strong> [Your Theme Here]</p>
+        </div>
+        
+        <div class="rsvp-form">
+            <h2 style="color: #667eea; margin-bottom: 20px;">RSVP</h2>
+            <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="POST" target="_blank">
+                
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="entry.YOUR_ENTRY_ID" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="entry.YOUR_ENTRY_ID" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Will you attend? *</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="yes" name="entry.YOUR_ENTRY_ID" value="Yes, I'll be there!" required>
+                            <label for="yes" style="margin: 0; font-weight: normal;">Yes, I'll be there! 🎉</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="no" name="entry.YOUR_ENTRY_ID" value="Sorry, can't make it">
+                            <label for="no" style="margin: 0; font-weight: normal;">Sorry, can't make it 😢</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" name="entry.YOUR_ENTRY_ID">
+                        <option value="1">Just me</option>
+                        <option value="2">2 people</option>
+                        <option value="3">3 people</option>
+                        <option value="4">4 people</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Submit RSVP</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+```
