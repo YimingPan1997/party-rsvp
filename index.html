@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,9 @@
         }
         
         body {
-            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial Rounded MT Bold', cursive, sans-serif;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', 'Marker Felt', 'Arial Rounded MT Bold', cursive, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             background: linear-gradient(135deg, #d4a574 0%, #c9a88a 50%, #e8d5c4 100%);
             min-height: 100vh;
             display: flex;
@@ -44,22 +47,23 @@
         
         .event-name {
             text-align: center;
-            font-size: 2.5em;
+            font-size: 2.2em;
             font-weight: bold;
             color: #d4a574;
             margin-bottom: 25px;
-            font-family: 'Comic Sans MS', 'Brush Script MT', cursive;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
             text-shadow: 3px 3px 6px rgba(184, 149, 106, 0.4);
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             transform: rotate(-2deg);
+            white-space: nowrap;
         }
         
         h1 {
             color: #c9a88a;
             text-align: center;
             margin-bottom: 15px;
-            font-size: 2.0em;
-            font-family: 'Comic Sans MS', cursive;
+            font-size: 2.8em;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
             text-shadow: 2px 2px 4px rgba(139, 90, 60, 0.3);
         }
         
@@ -68,7 +72,7 @@
             color: #a0826d;
             margin-bottom: 30px;
             font-size: 1.3em;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
             font-style: italic;
         }
         
@@ -84,7 +88,7 @@
             margin: 12px 0;
             color: #5d4e37;
             font-size: 1.15em;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
         }
         
         .details strong {
@@ -106,7 +110,7 @@
             color: #5d4e37;
             font-weight: bold;
             font-size: 1.1em;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
         }
         
         input[type="text"],
@@ -118,7 +122,7 @@
             font-size: 1.05em;
             transition: all 0.3s;
             background: rgba(255, 253, 251, 0.9);
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
         }
         
         input[type="text"]:focus,
@@ -163,6 +167,7 @@
             font-weight: normal;
             font-size: 1.05em;
             cursor: pointer;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
         }
         
         button {
@@ -176,7 +181,7 @@
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
             box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
         }
@@ -190,27 +195,44 @@
             color: #c9a88a;
             margin-bottom: 20px;
             font-size: 2em;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive;
             text-align: center;
             text-shadow: 2px 2px 4px rgba(139, 90, 60, 0.2);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .event-name {
+                font-size: 1.8em;
+                letter-spacing: 1px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="content-wrapper">
-            <div class="event-name">✨Forever 21 v10✨</div>
+            <div class="event-name">✨ Forever 21 v10 ✨</div>
             <h1>You're Invited! 🎉</h1>
             <p class="subtitle">Join us for Lena's birthday celebration</p>
             
             <div class="details">
-                <p><strong>📅 Date & Time:</strong> Jan 18, 7:30PM </p>
-                <p><strong>📍 Location:</strong> 402 Bangor Ave, CA 95123</p>
+                <p><strong>📅 Date:</strong> January 18, 2026</p>
+                <p><strong>🕐 Time:</strong> 7:30 PM</p>
+                <p><strong>📍 Location:</strong> 402 Bangor Ave, San Jose, CA 95123</p>
                 <p><strong>👗 Dress Code:</strong> Maillard Style & Black</p>
             </div>
             
             <div class="rsvp-form">
-                <h2>Kindly RSVP by Jan 16</h2>
+                <h2>RSVP ♡</h2>
                 <form action="https://docs.google.com/forms/d/e/1FAIpQLSeSzFXN0sxmN-iaVEiRLcnxvUGzTfYlrL3NmovzKnM6x5Z5eg/formResponse" method="POST" target="_blank">
                     
                     <div class="form-group">
@@ -225,7 +247,7 @@
                                 <input type="radio" id="yes" name="entry.2139173700" value="Yes, I'll be there!" required>
                                 <label for="yes">Yes, I'll be there! 🎉</label>
                             </div>
-
+                            <div class="radio-option">
                             <div class="radio-option">
                                 <input type="radio" id="no" name="entry.2139173700" value="Sorry, can't make it">
                                 <label for="no">Sorry, can't make it 😢</label>
@@ -261,6 +283,4 @@
     </script>
 </body>
 </html>
-
-
 
